@@ -33,5 +33,7 @@
 .include "asm/name_input.asm"
 .include "asm/sjis2ascii.asm"
 
+; Modify location string format
+.include "asm/saving_location.asm"
 
 .close
