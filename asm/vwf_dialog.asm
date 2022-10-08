@@ -4,7 +4,6 @@
 .region 0x0800C614-.,0x00
 ; Args: const char *str
 .func DialogAddStr
-
 mov r1,r8
 mov r2,r9
 mov r3,r10

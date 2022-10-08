@@ -310,7 +310,6 @@ ldr r3,[r1]
 bic r3,r5
 orr r3,r4
 stmia [r1]!,r3
-; add r1,4
 
 ; Let's always clear two tiles, the game assumes we rounded up.
 ; 60 and 124 because we added 4 above.
@@ -321,7 +320,7 @@ str r7,[r1,124]
 cmp r6,16
 bls @@noClear4
 mov r3,188
-;str r7,[r1,r3]
+str r7,[r1,r3]
 @@noClear4:
 
 cmp r1,r9
@@ -506,7 +505,6 @@ b @@lookupJIS
 @@rangeASCII:
 ; For now at least, we reuse the existing glyphs.
 mov r0,r1
-; teod: let's support all ascii...
 sub r0,32
 ldr r3,=AsciiTable
 

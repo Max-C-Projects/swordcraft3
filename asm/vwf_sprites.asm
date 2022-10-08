@@ -357,7 +357,7 @@ mov r2,r7
 ldrb r3,[r6,16]
 bl 0x08009F50
 
-; mov r0,r4
+mov r0,r4
 ; These are the X,Y coordinates of the string start.
 ; They are automatically offset by the character at a standard width.
 mov r3,4
@@ -374,9 +374,6 @@ beq @@skipAdjust
 mov r3,sp
 sub r3,r3,1
 ldsb r3,[r3,r7]
-
-
-
 ; ------------------------------------------
 ; teod: 21/6/6
 ; special case for non-doubled text
@@ -404,7 +401,6 @@ b   @@skipAdjust
 add r1,r1,r3
 add r1,r1,r3
 ; ------------------------------------------
-
 
 @@skipAdjust:
 ; uses r0,r1,r2
